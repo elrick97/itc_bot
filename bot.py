@@ -73,6 +73,7 @@ async def join_waitlist(ctx, course_code, student_id):
         msg = 'You can\'t do that'
     await ctx.send(msg)
 
+
 @commands.has_any_role("admin", "asistente")
 @client.command(brief="Marca como listo a un alumno")
 async def done(ctx, course_code, *student_id):
@@ -91,6 +92,7 @@ async def done(ctx, course_code, *student_id):
         msg = 'You can\'t do that'
     save_info()
     await ctx.send(msg)
+
 
 @commands.has_any_role("admin", "asistente")
 @client.command(brief="Elimina un alumno de una lista de espera")
